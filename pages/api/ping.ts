@@ -7,13 +7,15 @@ const limiter = rateLimit({
 })
 
 const ping = async (req: NextApiRequest, res: NextApiResponse) => {
+  const ip = req.headers['x-real-ip']
+
   try {
-    await limiter.check(res, 10, `rate-limit-ip:${req.headers['x-real-ip']}`)
+    await limiter.check(res, 10, `rate-limit-ip:${ip}`)
   } catch {
-    res.status(429).json({ pong: false })
+    res.status(429).json({ pong: false, ip })
   }
 
-  res.status(200).json({ pong: true })
+  res.status(200).json({ pong: true, ip })
 }
 
 export default ping

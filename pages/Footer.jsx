@@ -86,7 +86,7 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-          <div className="text-sm text-gray-600 mr-4">© 2022. Con todo y con nada. JPR ❤</div>
+          <div className="text-sm text-gray-600 mr-4">❤ Con todo y con nada. JPR © 2022</div>
         </div>
       </div>
     </footer>

@@ -14,10 +14,15 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <main className="flex-grow bg-black flex flex-wrap items-center content-center justify-center text-white" style={{ backgroundImage: 'url(/bg00.jpg)', backgroundPosition: 'center', backgroundSize: 'cover' }}>
-        <div className="py-24">
-          <div className="animate-[spin_100s_linear_infinite]">
-            <Snowflake size={256} />
-          </div>
+        <div className="flex flex-wrap justify-center py-24 opacity-80">
+          <Snowflake size={128}>
+            <animate
+              attributeName="opacity"
+              values="0.2;1;0.2"
+              dur="10s"
+              repeatCount="indefinite"
+            ></animate>
+          </Snowflake>
           <p className="w-full text-center text-xl">18 Junio | Apertura</p>
         </div>
       </main>
