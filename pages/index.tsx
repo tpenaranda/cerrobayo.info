@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="flex-grow bg-black flex flex-wrap items-center content-center justify-center text-white" style={{ backgroundImage: 'url(/bg00.jpg)', backgrounPosition: 'center', backgroundSize: 'cover' }}>
+      <main className="flex-grow bg-black flex flex-wrap items-center content-center justify-center text-white" style={{ backgroundImage: 'url(/bg00.jpg)', backgroundPosition: 'center', backgroundSize: 'cover' }}>
         <div className="py-24">
           <div className="animate-[spin_100s_linear_infinite]">
             <Snowflake size={256} />
